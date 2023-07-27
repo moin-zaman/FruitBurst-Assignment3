@@ -1,16 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com"></script>
     <title>Fruit Burst Landing Page</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8c9512f0cf.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'basic-color': '#FFF',
+                        'common-color': '#F85559',
+                        'common-text-color': '#FFFFFF',
+
+                    }
+                }
+            }
+        }
+    </script>
+
+
+    <style>
+        * {
+            font-family: 'Lato', sans-serif;
+        }
+    </style>
+
+
+
+
 </head>
-<body>
 
-    <header>
+<body class="bg-basic-color">
 
+    <header class="max-w-[1200px] mt-10 mx-auto p-4">
+        
+        <div class="navbar md:bg-common-color lg:bg-common-color mb-14 rounded-full h-24">
+            <div class="navbar-start order-last lg:order-first ml-[100px] md:ml-[500px] lg:ml-0">
+                <div class="dropdown">
+                    <label tabindex="0" class="btn btn-ghost text-black md:text-white lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 26 26"
+                            stroke="currentColor">
+                            <path stroke-linecap="rounded-full" stroke-linejoin="rounded-full" stroke-width="3"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </label> 
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content pt-3 z-[1] p-3 shadow bg-base-200 rounded-full">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruits</a></li>
+                    </ul>
+                </div>
+
+                <div class="hidden lg:flex">
+                    <ul class="flex gap-8 pl-12 text-white  ">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruits</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar-center order-first lg:order-none">
+                <img src="./images/logo.png" alt="" class="w-10">
+                <a class="btn btn-ghost normal-case text-3xl sm:text-[#121212] md:text-common-text-color lg:text-common-text-color">Fruit Burst</a>
+            </div>
+            <div class="navbar-end relative pr-14 hidden lg:flex">
+                <input type="text" placeholder="Type here" class="rounded-full h-10 input input-bordered input-sm max-w-xs w-full" />
+                <i class="fa-solid fa-magnifying-glass absolute right-16"></i>
+            </div>
+
+        </div>
+        
     </header>
 
     <main>
@@ -23,6 +96,7 @@
     <footer>
 
     </footer>
-    
+
 </body>
+
 </html>
